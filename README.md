@@ -7,6 +7,8 @@ A wrapper for [mydumper](https://github.com/maxbube/mydumper) written in Golang 
 Example:
 
 ```bash
+go get ./...
+go build
 BUCKET=mybucket-123123123 ./mydumpergo
 ```
 
