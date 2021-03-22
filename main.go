@@ -17,10 +17,10 @@ import (
 
 func check(cmd *exec.Cmd, outputdir, region, bucket string, maxFileCount int) {
 	// s3 manager
-	sess, _ := session.NewSession(&aws.Config{
+	session, _ := session.NewSession(&aws.Config{
 		Region: aws.String(region)},
 	)
-	uploader := s3manager.NewUploader(sess)
+	uploader := s3manager.NewUploader(session)
 
 	for {
 		files, _ := ioutil.ReadDir(outputdir)
